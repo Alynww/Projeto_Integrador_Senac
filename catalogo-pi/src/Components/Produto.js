@@ -1,45 +1,33 @@
 import Image from "next/image"
 
-export default function Produto(){
+export default function Produto(props){
     return(
-    <main>
-        <nav>
-            <p>Home</p>
-            <p>Catalogo</p>
-        </nav>
+        <div>
+            <nav>
+                <p>CATÁLOGO DE SMARTPHONE</p>
+            </nav>
+            
+        <main>
+            <section className="catalogo">
+                <Image className="imagem" src={"/assets/samsung.jpg"}  width={200} height={250} />
+                <p>{props.Nome}</p>
+                <h2>{props.Preco}</h2>
 
-        <section className="catalogo">
-
-            <Image className="teste" src={"/assets/samsung.jpg"}  width={200} height={250} />
-
-            <p>Smartphone Samsung Galaxy A54 5G 128GB 8GB RAM Tela 6.4'' Câmera Tripla de até 50MP + Selfie 32MP - Branco</p>
-
-            <h2>R$2000,00</h2>
-
-            <input id="txtNovidade" type="checkbox" />
-            <label for="txtNovidade">Novidade</label>
-
-            <input id="txtDisponivel" type="checkbox" />
-            <label for="txtDisponivel">Disponível</label>
-
-        </section>
-
-        <section className="catalogo">
-
-            <Image className="teste" src={"/assets/xiaomi.jpg"}  width={200} height={250} />
-
-            <p>Smartphone Samsung Galaxy A54 5G 128GB 8GB RAM Tela 6.4'' Câmera Tripla de até 50MP + Selfie 32MP - Branco</p>
-
-            <h2>R$2000,00</h2>
-
-            <input id="txtNovidade" type="checkbox" />
-            <label for="txtNovidade">Novidade</label>
-
-            <input id="txtDisponivel" type="checkbox" />
-            <label for="txtDisponivel">Disponível</label>
-
-        </section>
-
-    </main>
+                <div className="separar">
+                {
+                    props.Dispoinivel == false  
+                    ? <h3 className="disponivel">Disponível</h3>
+                    : null
+                }
+                {
+                    props.Novidade == true
+                    ? <h3 className="novidade">Novidade</h3>
+                    : null
+                }
+                </div>
+                
+            </section>
+        </main>
+        </div>
     )
 }
