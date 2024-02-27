@@ -1,25 +1,27 @@
 import Produto from "@/Components/Produto";
 import axios from "axios";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 
 export default function Home() {
 
   const [listaProduto, setListaProduto] = useState([])
 
-  axios
-    .get('https://localhost:7231/api/Produto')
-    .then(resp => setListaProduto(resp.data))
+    useEffect(() => {
+      axios
+      .get('https://localhost:7231/api/Produto/ListaAsync')
+      .then(resp => setListaProduto(resp.data))
+  }, []);
 
   return (
        <div>
         {
-          listaProduto.map((dado, index) => <Produto 
+          listaProduto.map((dado, index) => <Produto className="centralizado"
            key={index}
-           Nome={dado.Nome} 
-           Disponivel={dado.Disponivel} 
-           Novidade={dado.Novidade} 
-           Preco={dado.Preco}
+           nome={dado.nome} 
+           disponivel={dado.disponivel} 
+           novidade={dado.novidade} 
+           preco={dado.preco}
            />)
         }
        </div>
