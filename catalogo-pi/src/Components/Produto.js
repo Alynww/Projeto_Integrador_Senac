@@ -6,8 +6,9 @@ export default function Produto(props){
         <main>
             <section>
                 <section className="catalogo">
-                    <Image className="imagem" src={"/assets/samsung.jpg"}  width={200} height={250} />
+                    {/* <Image className="imagem" src={"/assets/pulseira2.webp"}  width={253} height={253} /> */}
                     <p>{props.nome}</p>
+                    <hr color="#D9B777"></hr>
                     <h2>{props.preco}</h2>
                     <div className="separar">
                     {

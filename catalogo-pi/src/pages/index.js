@@ -1,3 +1,4 @@
+import Cabecalho from "@/Components/Cabecalho";
 import Produto from "@/Components/Produto";
 import axios from "axios";
 import { useEffect, useState } from "react";
@@ -15,15 +16,19 @@ export default function Home() {
 
   return (
        <div>
-        {
-          listaProduto.map((dado, index) => <Produto className="centralizado"
-           key={index}
-           nome={dado.nome} 
-           disponivel={dado.disponivel} 
-           novidade={dado.novidade} 
-           preco={dado.preco}
-           />)
-        }
+
+        <Cabecalho></Cabecalho>
+        <section className="inline">
+          {
+            listaProduto.map((dado, index) => <Produto
+             key={index}
+             nome={dado.nome}
+             disponivel={dado.disponivel}
+             novidade={dado.novidade}
+             preco={dado.preco}
+             />)
+          }
+        </section>
        </div>
   );
 }
