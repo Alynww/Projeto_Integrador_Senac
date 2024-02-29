@@ -1,4 +1,5 @@
 import Cabecalho from "@/Components/Cabecalho";
+import Footer from "@/Components/Footer";
 import Produto from "@/Components/Produto";
 import axios from "axios";
 import { useEffect, useState } from "react";
@@ -17,7 +18,7 @@ export default function Home() {
   return (
        <div>
 
-        <Cabecalho></Cabecalho>
+        <Cabecalho/>
         <section className="inline">
           {
             listaProduto.map((dado, index) => <Produto
@@ -29,6 +30,8 @@ export default function Home() {
              />)
           }
         </section>
+
+        <Footer/>
        </div>
   );
 }

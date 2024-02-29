@@ -6,12 +6,14 @@ export default function Produto(props){
         <main>
             <section>
                 <section className="catalogo">
-                    {/* <Image className="imagem" src={"/assets/pulseira2.webp"}  width={253} height={253} /> */}
-                    <p>{props.nome}</p>
-                    <hr color="#D9B777"></hr>
-                    <h2>{props.preco}</h2>
+                <div className="card">
+                            <p>{props.nome}</p>
+                            <h2>R${props.preco},00</h2>
+                        </div>
+                        <Image className="imagem" src={"/assets/pulseiradeouro.webp"}  width={280} height={280} />
+                      
                     <div className="separar">
-                    {
+                    {/* {
                         props.dispoinivel == false
                             ? <h3 className="disponivel">Disponível</h3>
                             : null
@@ -20,7 +22,7 @@ export default function Produto(props){
                         props.novidade == true
                             ? <h3 className="novidade">Novidade</h3>
                             : null
-                    }
+                    } */}
                     </div>
                 </section>
             </section>
