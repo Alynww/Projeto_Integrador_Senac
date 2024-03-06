@@ -19,17 +19,18 @@ export default function Home() {
        <div>
 
         <Cabecalho/>
-        <section className="inline">
-          {
-            listaProduto.map((dado, index) => <Produto
-             key={index}
-             nome={dado.nome}
-             disponivel={dado.disponivel}
-             novidade={dado.novidade}
-             preco={dado.preco}
-             />)
-          }
-        </section>
+          <section>
+            {
+              listaProduto.map((dado, index) => <Produto
+               key={index}
+               nome={dado.nome}
+               disponivel={dado.disponivel}
+               novidade={dado.novidade}
+               preco={dado.preco}
+               imagem={dado.imagem}
+               />)
+            }
+          </section>
 
         <Footer/>
        </div>

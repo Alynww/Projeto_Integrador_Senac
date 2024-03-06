@@ -5,26 +5,27 @@ export default function Produto(props){
     <div>  
         <main>
             <section>
-                <section className="catalogo">
+                <section className="categoria">
 
-                    {/* <Image className="imagem" src={"/assets/pulseiradeouro.webp"}  width={280} height={280} /> */}
-
-                    <div className="card">
-                        <p>{props.nome}</p>
-                        <h2>R${props.preco},00</h2>
-
-                        <div className="separar">
+                    <div className="produtos">
+                    <img src={props.imagem} alt="" />
+                    
+                    <div className="separar">
                             {
-                                props.dispoinivel == false
-                                    ? <h3 className="disponivel">Disponível</h3>
+                                props.disponivel == false
+                                    ? <h2 className="disponivel">Disponível</h2>
                                     : null
                             }
                             {
                                 props.novidade == true
-                                    ? <h3 className="novidade">Novidade</h3>
+                                    ? <h2 className="novidade">Novidade</h2>
                                     : null
                             }
                         </div>
+                        <h1>{props.nome}</h1>
+                        <h1 className="preco">R${props.preco}</h1>
+                        <p className="parcela">10X sem juros</p>
+                        <button>Comprar</button>
                     </div> 
 
                 </section>
