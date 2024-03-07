@@ -9,15 +9,46 @@
     font-family: sans-serif;
 }
 
-
 .logo{
     width: 23%;
 }
   
-.logo a{
+.logo {
     font-weight: 900;
     font-family: 'caviar';
     font-size: 30px;
+}
+
+.pesquisa2{
+    background-color: #ffffff;
+    white-space: nowrap;
+    overflow: hidden;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 220px;
+    height: 35px;
+    box-shadow: 0px 0px 10px #a7a7a754;
+    /* visibility: hidden; */
+}
+
+.pesquisa2 input{
+    border-radius: 4px;
+    background-color: transparent;
+    width: 160px;
+    margin-left: 13px;
+    border: none;
+    outline: 0;
+}
+
+.pesquisa2 img{
+    padding: 10px;
+    border-radius: 50px;
+    justify-content: center;
+    margin-left: 5px;
+    width: 37px;
+    cursor: pointer;
 }
 
 nav{
@@ -39,11 +70,11 @@ nav li a{
     font-weight: 500;
     text-decoration: none;
     color: black;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 .catalogoo{
-    margin-left: 1100px;
-    float: right; 
+    margin-left: 890px;
     align-items: center;
     justify-content: center;
 }
@@ -76,7 +107,24 @@ nav li a{
 /* Corpo */
 
 main{
-    margin-inline: 20px;
+   margin-inline: 20px;
+
+}
+
+.certo{
+}
+
+section{
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.categoria{
+    display: grid;
+    gap: 10px;
+    display: flex;
 }
 
 .produtos img{
@@ -87,17 +135,12 @@ main{
     margin-bottom: 20px;
 }
 
-section{
-    justify-content: center;
-    display: flex;
-}
-
-.categoria{
-    flex-wrap: wrap;
-}
-
 .produtos{
-    margin-right: 1px;
+    /* white-space: nowrap;
+    overflow:  visible; */
+    flex: 1 0 200px;
+    margin-right: 10px;
+    margin-top: 20px;
     border: 1px solid #a1989891;
     flex-wrap: wrap;
     height: 450px;
@@ -126,7 +169,6 @@ section{
     font-size: 14px;
     margin-top: -10px;
     margin-bottom: 15px;
-
 }
 
 .separar{
@@ -147,7 +189,6 @@ section{
     justify-content: center;
     align-items: center;
     font-size: 15px;
-
 }
 
 .novidade{

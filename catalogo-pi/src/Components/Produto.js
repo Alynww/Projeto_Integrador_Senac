@@ -3,7 +3,6 @@ import Image from "next/image"
 export default function Produto(props){
     return(
     <div>  
-        <main>
             <section>
                 <section className="categoria">
 
@@ -30,7 +29,6 @@ export default function Produto(props){
 
                 </section>
             </section>
-        </main>
     </div>
     )
 }
