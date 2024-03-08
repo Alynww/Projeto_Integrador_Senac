@@ -2,8 +2,9 @@ import Image from "next/image"
 
 export default function Produto(props){
     return(
-    <div>  
+    <div> 
             <section>
+         
                 <section className="categoria">
 
                     <div className="produtos">
