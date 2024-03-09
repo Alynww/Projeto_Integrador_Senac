@@ -23,9 +23,8 @@ export default function Produto(props){
                             }
                         </div>
                         <h1>{props.nome}</h1>
-                        <h1 className="preco">R${props.preco}</h1>
-                        <p className="parcela">10X sem juros</p>
-                        <button>Comprar</button>
+                        <h1 className="preco">{Intl.NumberFormat('pt-br', {style: 'currency', currency: 'BRL'}).format(props.preco)}</h1>
+                        <button>Ver Detalhes</button>
                     </div> 
 
                 </section>
