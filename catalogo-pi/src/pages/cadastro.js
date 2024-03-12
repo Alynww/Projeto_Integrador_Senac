@@ -19,8 +19,11 @@ export default function cadastro(){
 
     function handleSalvar(){
         //Enviaremos o post para a API
+        dadosProduto.preco = dadosProduto.preco.replace(".", "");
+        dadosProduto.preco = dadosProduto.preco.replace(",", ".");
         axios.post('https://localhost:7231/api/Produto', dadosProduto)
             .then(res => console.log(res))
+            alert("Deu certo");
     }
 
     function handleChange(e){

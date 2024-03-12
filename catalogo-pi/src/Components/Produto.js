@@ -4,7 +4,6 @@ export default function Produto(props){
     return(
     <div> 
             <section>
-         
                 <section className="categoria">
 
                     <div className="produtos">
@@ -24,7 +23,7 @@ export default function Produto(props){
                         </div>
                         <h1>{props.nome}</h1>
                         <h1 className="preco">{Intl.NumberFormat('pt-br', {style: 'currency', currency: 'BRL'}).format(props.preco)}</h1>
-                        <button>Ver Detalhes</button>
+                       
                     </div> 
 
                 </section>

@@ -20,7 +20,7 @@ export default function Home() {
   function hadlePesquisar(filtro){
     const valorFiltrado = filtro.target.value
 
-    const filtrado = listaProduto.filter((dado) => 
+    const filtrado = listaProduto.filter((dado) =>  
     dado.nome.toLowerCase().includes(valorFiltrado.toLowerCase()))
 
     setListaProdutoFiltrado(filtrado)
@@ -30,7 +30,7 @@ export default function Home() {
 
   return (
        <div>
-
+        
         <Cabecalho pesquisar={hadlePesquisar}/>
 
           <main className="certo">
